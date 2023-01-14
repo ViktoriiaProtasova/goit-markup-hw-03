@@ -57,7 +57,6 @@ p {
 }
 .btn {
   cursor: pointer;
-  font-family: inherit;
 }
 .list {
   margin-top: 0;
@@ -204,6 +203,9 @@ p {
   padding-top: 120px;
   background-color: var(--light-color);
 }
+
+/* Preferences */
+
 .preferences {
   padding-top: 120px;
 }
@@ -215,6 +217,9 @@ p {
 .preferences-list > .list-item {
   flex-basis: calc((100% - 72px) / 4);
 }
+
+/* Works */
+
 .works-list {
   display: flex;
   flex-wrap: wrap;
@@ -225,6 +230,9 @@ p {
   flex-basis: calc((100% - 48px) / 3);
   background-color: var(--main-background-color);
 }
+
+/* Our Team */
+
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -263,13 +271,12 @@ p {
   color: var(--accent-color);
 }
 
-/* ------------------ */
+/* PORTFOLIO  */
 
-/* Portfolio */
+/* Gallery */
 
-.section-filter {
+.section-gallery {
   padding-top: 96px;
-  padding-bottom: 0;
 }
 .filter-btn {
   padding: 12px 24px;
@@ -292,9 +299,7 @@ p {
   gap: 24px;
   justify-content: center;
   align-items: center;
-}
-.gallery {
-  padding-top: 72px;
+  margin-bottom: 72px;
 }
 .gallery-list {
   display: flex;
@@ -315,4 +320,3 @@ p {
   border-top: none;
   background-color: var(--additional-text-color);
 }
-/* ------------------ */
