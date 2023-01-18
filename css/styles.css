@@ -11,6 +11,8 @@
   --hero-background-color: #2e2f42;
   --additional-text-color: #ffffff;
   --main-background-color: #ffffff;
+  --card-column-gap: 24px;
+  --card-row-gap: 48px;
 }
 
 body {
@@ -20,8 +22,6 @@ body {
 }
 img {
   display: block;
-  min-width: 100%;
-  height: auto;
 }
 h1,
 h2,
@@ -71,13 +71,19 @@ p {
 .link:focus {
   color: var(--primary-brand-color);
 }
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
 /* Header */
-
+.nav-link.current {
+  color: var(--primary-brand-color);
+}
 .header {
   border-bottom: 1px solid var(--accent-color);
 }
-.header-flex {
+.header-nav {
   display: flex;
   align-items: center;
 }
@@ -113,6 +119,9 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+}
+.nav-link.current {
+  color: var(--primary-brand-color);
 }
 .address {
   display: flex;
@@ -174,9 +183,6 @@ p {
 
 /* Sections */
 
-.section {
-  padding-bottom: 120px;
-}
 .section-title {
   margin-bottom: 72px;
   font-weight: 700;
@@ -200,33 +206,30 @@ p {
   letter-spacing: 0.02em;
 }
 .section-accent {
-  padding-top: 120px;
   background-color: var(--light-color);
 }
 
 /* Preferences */
 
-.preferences {
-  padding-top: 120px;
-}
 .preferences-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  column-gap: var(--card-column-gap);
 }
 .preferences-list > .list-item {
   flex-basis: calc((100% - 72px) / 4);
 }
 
 /* Works */
-
+.works {
+  padding-top: 0;
+}
 .works-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  column-gap: var(--card-column-gap);
 }
 .works-list > .list-item {
-  min-width: 360px;
   flex-basis: calc((100% - 48px) / 3);
   background-color: var(--main-background-color);
 }
@@ -236,11 +239,10 @@ p {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  column-gap: var(--card-column-gap);
 }
 .team-list > .list-item {
   flex-basis: calc((100% - 72px) / 4);
-  min-width: 264px;
 }
 .team-list-field {
   padding-top: 32px;
@@ -275,7 +277,7 @@ p {
 
 /* Gallery */
 
-.section-gallery {
+.gallery {
   padding-top: 96px;
 }
 .filter-btn {
@@ -296,7 +298,7 @@ p {
 }
 .filter {
   display: flex;
-  gap: 24px;
+  column-gap: var(--card-column-gap);
   justify-content: center;
   align-items: center;
   margin-bottom: 72px;
@@ -304,12 +306,11 @@ p {
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  column-gap: var(--card-column-gap);
+  row-gap: var(--card-row-gap);
 }
 .gallery-list > .list-item {
   flex-basis: calc((100% - 48px) / 3);
-  min-width: 360px;
 }
 .gallery-list-field {
   padding-top: 32px;
@@ -319,4 +320,12 @@ p {
   border: 1px solid var(--accent-color);
   border-top: none;
   background-color: var(--additional-text-color);
+}
+.card-thumb {
+  height: 300px;
+}
+.card-thumb > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
